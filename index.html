@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeWork03</title>
+    <style>
+        /* #myBtn{
+            height:  50px;
+            length:  50px;
+        } */
+    </style>
+</head>
+<body>
+    <h1 id="count"></h1>
+    <div></div>
+    <button id="myBtn">Generate Random uID</button>
+
+
+    <script>
+        let count   = 0
+        let random  = 'random#'        
+
+        document.getElementById('myBtn').addEventListener('click', function () {
+            event.preventDefault()
+            let r1      = Math.floor((Math.random() * 25) + 97)
+            let r2      = Math.floor((Math.random() * 33) + 38)
+            let r3      = Math.floor((Math.random() * 65) + 90)        
+            let rand    = String.fromCharCode(r1 , r2 , r3)
+            let result  = r1 + rand + r2 + r3
+
+            document.getElementById('count').textContent = result
+            })
+        // document.getElementById('count').textContent = result
+
+//  33 - 38 apecial
+//   65 -90 upper case
+//  97 -122 lower case 
+
+
+    </script>
+</body>
+</html>
